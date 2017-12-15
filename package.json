@@ -1,0 +1,40 @@
+{
+  "name": "totalvoice",
+  "version": "1.0.0",
+  "description": "API de comunicação com os serviços da TotalVoice (http://totalvoice.com.br)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totalvoice/totalvoice-node.git"
+  },
+  "keywords": [
+    "totalvoice",
+    "sms",
+    "node",
+    "lib",
+    "api",
+    "voip",
+    "tts",
+    "centrais",
+    "ramais",
+    "sip",
+    "did"
+  ],
+  "author": "Diego Wagner <diegowagner4@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/totalvoice/totalvoice-node/issues"
+  },
+  "homepage": "https://github.com/totalvoice/totalvoice-node#readme",
+  "dependencies": {
+    "axios": "^0.17.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
