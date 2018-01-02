@@ -203,23 +203,6 @@ client.perfil.consultaSaldo()
 
 ```
 
-> ##### Todas as classes da API podem ser instânciadas separadamente também
-
-```javascript
-
-const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{meu-access-token}}");
-
-client.central.buscaRamal(123546) // ID do Ramal
-    .then(function(data) {
-        console.log(data);
-    })
-    .catch(function(error) {
-        console.log('Erro: ', error)
-    });
-
-```
-
 Mais informações sobre os métodos disponíveis podem ser encontrados na documentação da [API](https://api.totalvoice.com.br/doc/#/)
 
 > ### Contribua!
