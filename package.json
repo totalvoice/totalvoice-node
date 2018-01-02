@@ -1,5 +1,5 @@
 {
-  "name": "totalvoice",
+  "name": "totalvoice-node",
   "version": "1.0.0",
   "description": "API de comunicação com os serviços da TotalVoice (http://totalvoice.com.br)",
   "main": "index.js",
