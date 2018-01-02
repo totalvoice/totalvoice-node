@@ -1,7 +1,7 @@
 # totalvoice-node
 Cliente em NodeJS para API da Totalvoice
 
-[![Build Status](https://travis-ci.org/totalvoice/totalvoice-node.svg?style=flat-square)](http://travis-ci.org/#!/totalvoice/totalvoice-node)
+[![Build Status](https://travis-ci.org/totalvoice/totalvoice-node.svg?branch=master)](http://travis-ci.org/#!/totalvoice/totalvoice-node)
 
 > ### Funcionalidades
 
