@@ -203,6 +203,16 @@ client.perfil.consultaSaldo()
 
 ```
 
+> ##### Caso você necessite utilizar seu próprio endereço configurado na Total Voice
+
+```javascript
+
+const totalvoice = require('totalvoice-node');
+const client = new totalvoice("{{meu-access-token}}", "https://seu-dominio.com.br");
+...
+
+```
+
 Mais informações sobre os métodos disponíveis podem ser encontrados na documentação da [API](https://api.totalvoice.com.br/doc/#/)
 
 > ### Contribua!
