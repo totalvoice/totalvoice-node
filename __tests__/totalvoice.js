@@ -1,5 +1,4 @@
 const Totalvoice = require('../index.js');
-const HttpClient = require('../lib/client.js');
 const Chamada = require('../lib/api/chamada.js');
 const Audio = require('../lib/api/audio.js');
 const Perfil = require('../lib/api/perfil');
