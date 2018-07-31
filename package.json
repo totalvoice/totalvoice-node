@@ -1,6 +1,6 @@
 {
   "name": "totalvoice-node",
-  "version": "1.3.1",
+  "version": "1.4.1",
   "description": "API de comunicação com os serviços da TotalVoice (http://totalvoice.com.br)",
   "main": "index.js",
   "scripts": {
