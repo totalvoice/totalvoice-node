@@ -1,6 +1,7 @@
 const Totalvoice = require('../index.js');
 const Chamada = require('../lib/api/chamada.js');
 const Audio = require('../lib/api/audio.js');
+const Bina = require('../lib/api/bina.js');
 const Perfil = require('../lib/api/perfil');
 const Conta = require('../lib/api/conta');
 const Composto = require('../lib/api/composto');
@@ -14,6 +15,10 @@ const client = new Totalvoice('123456789', 'https://foo.bar');
 
 test('Testa o atributo se é instância de Audio', function(){
     expect(client.audio).toBeInstanceOf(Audio);
+});
+
+test('Testa o atributo se é instância de Bina', function(){
+    expect(client.bina).toBeInstanceOf(Bina);
 });
 
 test('Testa o atributo se é instância de Chamada', function(){
