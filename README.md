@@ -53,7 +53,7 @@ A seguir exemplos de como pode ser utilizada esta biblioteca.
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.chamada.ligar("4832830151", "4811111111")
     .then(function (data) {
@@ -70,7 +70,7 @@ client.chamada.ligar("4832830151", "4811111111")
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.chamada.buscar(123) // ID da chamada
     .then(function (data) {
@@ -88,7 +88,7 @@ client.chamada.buscar(123) // ID da chamada
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.chamada.encerrar(123) // ID da chamada
     .then(function (data) {
@@ -105,7 +105,7 @@ client.chamada.encerrar(123) // ID da chamada
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.sms.enviar("4811111111", "Mensagem SMS")
     .then(function (data) {
@@ -122,7 +122,7 @@ client.sms.enviar("4811111111", "Mensagem SMS")
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 var opcoes = {velocidade: 2, tipo_voz: "br-Vitoria"};
 client.tts.enviar("4811111111", "Mensagem TTS", opcoes);
@@ -140,7 +140,7 @@ client.tts.enviar("4811111111", "Mensagem TTS", opcoes);
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.audio.enviar("4811111111", "https://foo.bar/audio.mp3")
     .then(function(data) {
@@ -157,7 +157,7 @@ client.audio.enviar("4811111111", "https://foo.bar/audio.mp3")
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.central.buscaRamal(123546) // ID do Ramal
     .then(function(data) {
@@ -174,7 +174,7 @@ client.central.buscaRamal(123546) // ID do Ramal
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.conta.buscar(123546) // ID da Conta
     .then(function(data) {
@@ -191,7 +191,7 @@ client.conta.buscar(123546) // ID da Conta
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}");
+const client = new totalvoice("access-token");
 
 client.perfil.consultaSaldo()
     .then(function(data) {
@@ -208,7 +208,7 @@ client.perfil.consultaSaldo()
 ```javascript
 
 const totalvoice = require('totalvoice-node');
-const client = new totalvoice("{{access-token}}", "https://seu-dominio.com.br");
+const client = new totalvoice("access-token", "https://seu-dominio.com.br");
 ...
 
 ```
