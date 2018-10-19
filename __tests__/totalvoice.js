@@ -10,6 +10,8 @@ const SMS = require('../lib/api/sms');
 const TTS = require('../lib/api/tts');
 const Central = require('../lib/api/central');
 const DID = require('../lib/api/did');
+const fila = require('../lib/api/fila');
+const status = require('../lib/api/status');
 
 const client = new Totalvoice('123456789', 'https://foo.bar');
 
@@ -55,4 +57,12 @@ test('Testa o atributo se é instância de Central', function(){
 
 test('Testa o atributo se é instância de DID', function(){
     expect(client.did).toBeInstanceOf(DID);
+});
+
+test('Testa o atributo se é instância de Fila', function(){
+    expect(client.fila).toBeInstanceOf(fila);
+});
+
+test('Testa o atributo se é instância de Status', function(){
+    expect(client.status).toBeInstanceOf(status);
 });
