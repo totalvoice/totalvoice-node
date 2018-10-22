@@ -213,6 +213,26 @@ const client = new totalvoice("access-token", "https://seu-dominio.com.br");
 
 ```
 
+> ##### Caso você necessite utilizar com Proxy
+
+```javascript
+
+const totalvoice = require('totalvoice-node');
+let options = {
+    proxy: {
+        host: 'proxy.com',
+        port: 8888,
+        auth: {
+            username: 'XXXX',
+            password: 'XXXX'
+        }
+    }
+};
+const client = new totalvoice("access-token", "https://seu-dominio.com.br", options);
+...
+
+```
+
 Mais informações sobre os métodos disponíveis podem ser encontrados na documentação da [API](https://api.totalvoice.com.br/doc/#/)
 
 > ### Contribua!
