@@ -12,6 +12,7 @@ const Central = require('../lib/api/central');
 const DID = require('../lib/api/did');
 const fila = require('../lib/api/fila');
 const status = require('../lib/api/status');
+const validanumero = require('../lib/api/validanumero');
 
 const client = new Totalvoice('123456789', 'https://foo.bar');
 
@@ -65,4 +66,8 @@ test('Testa o atributo se é instância de Fila', function(){
 
 test('Testa o atributo se é instância de Status', function(){
     expect(client.status).toBeInstanceOf(status);
+});
+
+test('Testa o atributo se é instância de ValidaNumero', function(){
+    expect(client.validanumero).toBeInstanceOf(validanumero);
 });
