@@ -107,7 +107,8 @@ client.chamada.encerrar(123) // ID da chamada
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-client.sms.enviar("4811111111", "Mensagem SMS")
+var opcoes = {bina: "bina_cadastrada"};
+client.sms.enviar("4811111111", "Mensagem SMS", opcoes)
     .then(function (data) {
         console.log(data)
     })
@@ -124,7 +125,7 @@ client.sms.enviar("4811111111", "Mensagem SMS")
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-var opcoes = {velocidade: 2, tipo_voz: "br-Vitoria"};
+var opcoes = {velocidade: 2, tipo_voz: "br-Vitoria", bina: "bina_cadastrada"};
 client.tts.enviar("4811111111", "Mensagem TTS", opcoes);
     .then(function(data) {
         console.log(data);
