@@ -107,8 +107,10 @@ client.chamada.encerrar(123) // ID da chamada
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-var opcoes = {bina: "bina_cadastrada"};
-client.sms.enviar("4811111111", "Mensagem SMS", opcoes)
+var resposta_usuario = false;
+var multi_sms = false;
+var data_criacao = '';
+client.sms.enviar("4811111111", "Mensagem SMS", resposta_usuario, multi_sms, data_criacao)
     .then(function (data) {
         console.log(data)
     })
