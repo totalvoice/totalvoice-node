@@ -34,7 +34,9 @@
   },
   "homepage": "https://github.com/totalvoice/totalvoice-node#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
