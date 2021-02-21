@@ -44,4 +44,6 @@
     "babel-preset-stage-2": "^6.24.1",
     "jest": "^24.8.0"
   }
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts"
 }
