@@ -6,13 +6,13 @@ export = Tts
  * @param {object} httpClient
  */
 declare function Tts(httpClient: AxiosInstance): void
-interface EnviarTTSResposta {
+interface EnviarTTS {
   resposta_usuario?: boolean
   tipo_voz?: string
   bina?: string
   gravar_audio?: boolean
   detecta_caixa?: boolean
-  bina_inteligente?: true
+  bina_inteligente?: boolean
 }
 declare class Tts {
   /**
@@ -27,7 +27,7 @@ declare class Tts {
    * @param {object} opcoes
    * @return {Promise}
    */
-  enviar: (numero_destino: string, mensagem: string, opcoes: object) => Promise<EnviarTTSResposta>
+  enviar: (numero_destino: string, mensagem: string, opcoes: EnviarTTS) => Promise<any>
   /**
    * Busca um tts pelo seu ID
    * @param {int} id
@@ -41,5 +41,4 @@ declare class Tts {
    * @return {Promise}
    */
   relatorio: (data_inicio: string, data_fim: string) => Promise<any>
-  nome: (name: string) => any
 }
