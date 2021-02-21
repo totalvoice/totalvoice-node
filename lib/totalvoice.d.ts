@@ -21,33 +21,36 @@ export = Totalvoice
  * @param {string} baseUrl
  * @param {object} options
  */
-declare function Totalvoice(
-  accessToken: string,
-  baseUrl?: string,
-  options?: AxiosRequestConfig
-): void
-declare class Totalvoice {
-  /**
-   * Módulo TotalVoice
-   * @param {string} accessToken
-   * @param {string} baseUrl
-   * @param {object} options
-   */
-  constructor(accessToken: string, baseUrl?: string, options?: AxiosRequestConfig)
-  httpClient: AxiosInstance
-  get chamada(): Chamada
-  get audio(): Audio
-  get bina(): Bina
-  get perfil(): Perfil
-  get conta(): Conta
-  get composto(): Composto
-  get conferencia(): Conferencia
-  get sms(): Sms
-  get tts(): Tts
-  get central(): Central
-  get did(): Did
-  get status(): Status
-  get fila(): Fila
-  get validanumero(): ValidaNumero
-  get verificacao(): Verificacao
+
+declare module 'totalvoice-node' {
+  declare function Totalvoice(
+    accessToken: string,
+    baseUrl?: string,
+    options?: AxiosRequestConfig
+  ): void
+  declare class Totalvoice {
+    /**
+     * Módulo TotalVoice
+     * @param {string} accessToken
+     * @param {string} baseUrl
+     * @param {object} options
+     */
+    constructor(accessToken: string, baseUrl?: string, options?: AxiosRequestConfig)
+    httpClient: AxiosInstance
+    get chamada(): Chamada
+    get audio(): Audio
+    get bina(): Bina
+    get perfil(): Perfil
+    get conta(): Conta
+    get composto(): Composto
+    get conferencia(): Conferencia
+    get sms(): Sms
+    get tts(): Tts
+    get central(): Central
+    get did(): Did
+    get status(): Status
+    get fila(): Fila
+    get validanumero(): ValidaNumero
+    get verificacao(): Verificacao
+  }
 }
