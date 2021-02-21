@@ -25,19 +25,19 @@ declare class Chamada {
    * @param {int} id
    * @return {Promise}
    */
-  encerrar: (id: any) => Promise<any>
+  encerrar: (id: string) => Promise<any>
   /**
    * Busca uma chamada pelo seu ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: any) => Promise<any>
+  buscar: (id: string) => Promise<any>
   /**
    * Download do áudio de uma chamada gravada
    * @param {int} id
    * @return {Promise}
    */
-  downloadGravacao: (id: any) => Promise<any>
+  downloadGravacao: (id: string) => Promise<any>
   /**
    * Relatório de mensagens de Chamadas
    * @param {string} data_inicio
@@ -52,7 +52,7 @@ declare class Chamada {
    * @param {int} modo
    * @return {Promise}
    */
-  escutar: (id: any, numero: string, modo: any) => Promise<any>
+  escutar: (id: string, numero: string, modo: any) => Promise<any>
   /**
    * (Beta) Faz uma transferência da chamada atual
    * @param {int} id
@@ -60,7 +60,7 @@ declare class Chamada {
    * @param {string} perna
    * @return {Promise}
    */
-  transferir: (id: any, numero: string, perna: string) => Promise<any>
+  transferir: (id: string, numero: string, perna: string) => Promise<any>
   /**
    * Avalia uma Chamada com nota de 1 a 5
    * @param {int} id
@@ -68,5 +68,5 @@ declare class Chamada {
    * @param {string} comentario
    * @return {Promise}
    */
-  avaliar: (id: any, nota: string, comentario: string) => Promise<any>
+  avaliar: (id: string, nota: string, comentario: string) => Promise<any>
 }

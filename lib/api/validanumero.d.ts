@@ -22,16 +22,16 @@ declare class ValidaNumero {
    */
   enviar: (
     numero_destino: string,
-    gravar_audio: any,
+    gravar_audio: boolean,
     bina: string,
-    max_tentativas: any
+    max_tentativas: number
   ) => Promise<any>
   /**
    * Busca uma validação pelo ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: any) => Promise<any>
+  buscar: (id: string) => Promise<any>
   /**
    * Relatório de validações de numeros
    * @param {string} data_inicio

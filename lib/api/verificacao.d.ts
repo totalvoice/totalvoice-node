@@ -12,6 +12,11 @@ declare class Verificacao {
    * @param {object} httpClient
    */
   constructor(httpClient: AxiosInstance)
-  enviar: (numero_destino: any, nome_produto: any, tamanho: any, tts: any) => any
-  buscar: (id: any, pin: any) => any
+  enviar: (
+    numero_destino: string,
+    nome_produto: string,
+    tamanho?: number,
+    tts?: boolean
+  ) => { id: string }
+  buscar: (id: string, pin: string) => { dados: 'valido' | 'invalido' }
 }

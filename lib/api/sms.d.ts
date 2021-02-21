@@ -24,16 +24,16 @@ declare class Sms {
   enviar: (
     numero_destino: string,
     mensagem: string,
-    resposta_usuario: any,
-    multi_sms: any,
-    data_criacao: string
+    resposta_usuario?: boolean,
+    multi_sms?: boolean,
+    data_criacao?: string
   ) => Promise<any>
   /**
    * Busca um sms pelo seu ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: any) => Promise<any>
+  buscar: (id: string) => Promise<any>
   /**
    * Relatório de mensagens de Sms
    * @param {string} data_inicio

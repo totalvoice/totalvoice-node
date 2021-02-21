@@ -22,7 +22,7 @@ declare class Did {
    * @param  {int} id
    * @return {Promise}
    */
-  excluir: (id: any) => Promise<any>
+  excluir: (id: string) => Promise<any>
   /**
    * Atualiza um did
    * @param {int} id
@@ -30,7 +30,7 @@ declare class Did {
    * @param {string} ura_id
    * @return {Promise}
    */
-  atualizar: (id: any, ramal_id: string, ura_id: string) => Promise<any>
+  atualizar: (id: string, ramal_id: string, ura_id: string) => Promise<any>
   /**
    * Lista todos os dids disponiveis
    * @return {Promise}
@@ -41,13 +41,13 @@ declare class Did {
    * @param {int} id
    * @return {Promise}
    */
-  adquirir: (id: any) => Promise<any>
+  adquirir: (id: string) => Promise<any>
   /**
    * Busca uma chamada recebida pelo seu ID
    * @param {int} id
    * @return {Promise}
    */
-  buscaChamadaRecebida: (id: any) => Promise<any>
+  buscaChamadaRecebida: (id: string) => Promise<any>
   /**
    * Relatório de chamadas DID
    * @param {string} data_inicio

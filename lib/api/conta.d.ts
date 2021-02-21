@@ -23,20 +23,20 @@ declare class Conta {
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: any) => Promise<any>
+  buscar: (id: string) => Promise<any>
   /**
    * Remove uma conta
    * @param {int} id
    * @return {Promise}
    */
-  excluir: (id: any) => Promise<any>
+  excluir: (id: string) => Promise<any>
   /**
    * Atualiza os dados de uma conta criada
    * @param {int} $id
    * @param {object} data
    * @return {Promise}
    */
-  atualizar: (id: any, data: object) => Promise<any>
+  atualizar: (id: string, data: object) => Promise<any>
   /**
    * Lista contas criadas por mim
    * @return {Promise}
@@ -48,7 +48,7 @@ declare class Conta {
    * @param {object} data
    * @return {Promise}
    */
-  recargaBonus: (id: any, data: object) => Promise<any>
+  recargaBonus: (id: string, data: object) => Promise<any>
   /**
    * Retorna a lista de webhooks default configurados para esta conta
    * @return {Promise}

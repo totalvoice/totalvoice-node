@@ -22,7 +22,7 @@ declare class Conferencia {
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: any) => Promise<any>
+  buscar: (id: string) => Promise<any>
   /**
    * Adiciona na conferência
    * @param {int} id
@@ -31,11 +31,11 @@ declare class Conferencia {
    * @param {bool} gravar_audio
    * @return {Promise}
    */
-  addNumero: (id: any, numero: string, bina: string, gravar_audio: any) => Promise<any>
+  addNumero: (id: string, numero: string, bina: string, gravar_audio: any) => Promise<any>
   /**
    * Remove uma conferência ativa
    * @param  {int} id
    * @return {Promise}
    */
-  excluir: (id: any) => Promise<any>
+  excluir: (id: string) => Promise<any>
 }

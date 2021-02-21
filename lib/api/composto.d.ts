@@ -33,7 +33,7 @@ declare class Composto {
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: any) => Promise<any>
+  buscar: (id: string) => Promise<any>
   /**
    * Relatório de mensagens de Composto
    * @param {string} data_inicio

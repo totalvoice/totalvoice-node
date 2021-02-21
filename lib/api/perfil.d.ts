@@ -5,6 +5,18 @@ export = Perfil
  * Módulo Perfil
  * @param {object} httpClient
  */
+interface AtualizarConta {
+  nome?: string
+  login?: string
+  senha?: string
+  cpf_cnpj?: string
+  telefone?: string
+  preco_fixo?: string
+  preco_cel?: string
+  preco_ramal?: string
+  email_financeiro?: string
+  nome_fantasia?: string
+}
 declare function Perfil(httpClient: AxiosInstance): void
 declare class Perfil {
   /**
@@ -27,7 +39,7 @@ declare class Perfil {
    * @param {object} $data
    * @return {Promise}
    */
-  atualizaDadosConta: (data: any) => Promise<any>
+  atualizaDadosConta: (data: AtualizarConta) => Promise<any>
   /**
    * Gera um relatório com as recargas efetuadas
    * @return {Promise}
