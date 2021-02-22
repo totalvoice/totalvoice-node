@@ -1,5 +1,25 @@
 import { AxiosInstance } from 'axios'
+import { RelatorioResponse, Response } from '../totalvoice'
 
+interface AudioObject {
+  id: string
+  numero_destino: string
+  data_criacao: string
+  tipo: string
+  status: string
+  duracao_segundos: string
+  duracao: string
+  duracao_cobrada_segundos: string
+  duracao_cobrada: string
+  duracao_falada_segundos: string
+  duracao_falada: string
+  preco: number
+  url_audio: string
+  resposta_usuario: boolean
+  resposta: string
+  motivo_desconexao: string
+  url_gravacao: string
+}
 export = Audio
 /**
  * Módulo Audio
@@ -27,18 +47,18 @@ declare class Audio {
     resposta_usuario: any,
     bina: string,
     gravar_audio: boolean
-  ) => Promise<any>
+  ) => Promise<Response<{ id: string }>>
   /**
    * Busca um audio pelo seu ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: string | number) => Promise<any>
+  buscar: (id: string) => Promise<Response<AudioObject>>
   /**
    * Relatório de mensagens de Audios
    * @param {string} data_inicio
    * @param {string} data_fim
    * @return {Promise}
    */
-  relatorio: (data_inicio: string, data_fim: string) => Promise<any>
+  relatorio: (data_inicio: string, data_fim: string) => Promise<RelatorioResponse<AudioObject>>
 }

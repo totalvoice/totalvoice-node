@@ -1,4 +1,26 @@
 import { AxiosInstance } from 'axios'
+import { Response } from '../totalvoice'
+
+interface ChamadaConferenciaObject {
+  id: number
+  conferencia_id: number
+  url_gravacao: string
+  numero: number
+  data_criacao: string
+  cli: number
+  duracao: string
+  duracao_cobrada: string
+  status: string
+  preco: number
+  data_inicio: string
+}
+
+interface ConferenciaObject {
+  id: number
+  data_criacao: string
+  data_termino: string
+  chamadas: ChamadaConferenciaObject[]
+}
 
 export = Conferencia
 /**
@@ -16,13 +38,13 @@ declare class Conferencia {
    * Cria uma conferência
    * @return {Promise}
    */
-  criar: () => Promise<any>
+  criar: () => Promise<Response<ConferenciaObject>>
   /**
    * Busca uma conferência pelo seu ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: string) => Promise<any>
+  buscar: (id: string) => Promise<Response<ConferenciaObject>>
   /**
    * Adiciona na conferência
    * @param {int} id

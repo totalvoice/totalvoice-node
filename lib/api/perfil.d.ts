@@ -1,10 +1,7 @@
 import { AxiosInstance } from 'axios'
+import { ContaObject, WebhookObject } from './conta'
+import { RelatorioResponse, Response } from '../totalvoice'
 
-export = Perfil
-/**
- * Módulo Perfil
- * @param {object} httpClient
- */
 interface AtualizarConta {
   nome?: string
   login?: string
@@ -17,6 +14,19 @@ interface AtualizarConta {
   email_financeiro?: string
   nome_fantasia?: string
 }
+
+interface RecargaObject {
+  id: number
+  credito: number
+  data: string
+  descricao: string
+}
+
+export = Perfil
+/**
+ * Módulo Perfil
+ * @param {object} httpClient
+ */
 declare function Perfil(httpClient: AxiosInstance): void
 declare class Perfil {
   /**
@@ -28,12 +38,12 @@ declare class Perfil {
    * Consulta saldo atual
    * @return {Promise}
    */
-  consultaSaldo: () => Promise<any>
+  consultaSaldo: () => Promise<Response<{ saldo: number }>>
   /**
    * Consulta os dados da minha Conta
    * @return {Promise}
    */
-  minhaConta: () => Promise<any>
+  minhaConta: () => Promise<Response<ContaObject>>
   /**
    * Atualiza os dados da minha conta
    * @param {object} $data
@@ -44,29 +54,29 @@ declare class Perfil {
    * Gera um relatório com as recargas efetuadas
    * @return {Promise}
    */
-  relatorioRecarga: () => Promise<any>
+  relatorioRecarga: () => Promise<RelatorioResponse<RecargaObject>>
   /**
    * Gera uma URL para recarga de créditos
    * @param {string} url_retorno
    * @return {Promise}
    */
-  urlRecarga: (url_retorno: string) => Promise<any>
+  urlRecarga: (url_retorno: string) => Promise<Response<{ url: string }>>
   /**
    * Retorna a lista de webhooks configurados para esta conta
    * @return {Promise}
    */
-  webhooks: () => Promise<any>
+  webhooks: () => Promise<Response<{ webhooks: WebhookObject[] }>>
   /**
    * Apaga um webhook
    * @param {string} nome
    * @return {Promise}
    */
-  excluirWebhook: (nome: string) => Promise<any>
+  excluirWebhook: (nome: string) => Promise<Response<null>>
   /**
    * Cadastra ou atualiza um webhook
    * @param {string} nome
    * @param {string} url
    * @return {Promise}
    */
-  salvaWebhook: (nome: string, url: string) => Promise<any>
+  salvaWebhook: (nome: string, url: string) => Promise<Response<null>>
 }

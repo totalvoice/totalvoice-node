@@ -1,4 +1,5 @@
 import { AxiosInstance } from 'axios'
+import { Response } from '../totalvoice'
 
 export = Verificacao
 /**
@@ -17,6 +18,6 @@ declare class Verificacao {
     nome_produto: string,
     tamanho?: number,
     tts?: boolean
-  ) => { id: string }
-  buscar: (id: string, pin: string) => { dados: 'valido' | 'invalido' }
+  ) => Promise<Response<{ id: string }>>
+  buscar: (id: string, pin: string) => Promise<Response<{ resultado: 'valido' | 'invalido' }>>
 }

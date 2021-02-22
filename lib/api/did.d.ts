@@ -1,4 +1,19 @@
 import { AxiosInstance } from 'axios'
+import { Response } from '../totalvoice'
+
+interface DidObject {
+  id: number
+  cidade: string
+  estado: string
+  numero: string
+}
+
+interface RelatorioDid extends Response<RelatorioDid> {
+  total: number
+  posicao: number
+  limite: string
+  relatorio: DidObject[]
+}
 
 export = Did
 /**
@@ -16,13 +31,13 @@ declare class Did {
    * Lista todos os dids pertencentes
    * @return {Promise}
    */
-  listar: () => Promise<any>
+  listar: () => Promise<Response<{ dids: DidObject[] }>>
   /**
    * Remove um did
    * @param  {int} id
    * @return {Promise}
    */
-  excluir: (id: string) => Promise<any>
+  excluir: (id: string) => Promise<Response<null>>
   /**
    * Atualiza um did
    * @param {int} id
@@ -30,7 +45,7 @@ declare class Did {
    * @param {string} ura_id
    * @return {Promise}
    */
-  atualizar: (id: string, ramal_id: string, ura_id: string) => Promise<any>
+  atualizar: (id: string, ramal_id?: string, ura_id?: string) => Promise<Response<null>>
   /**
    * Lista todos os dids disponiveis
    * @return {Promise}
@@ -54,5 +69,5 @@ declare class Did {
    * @param {string} data_fim
    * @return {Promise}
    */
-  relatorio: (data_inicio: string, data_fim: string) => Promise<any>
+  relatorio: (data_inicio: string, data_fim: string) => Promise<RelatorioDid>
 }

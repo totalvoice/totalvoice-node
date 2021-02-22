@@ -15,6 +15,20 @@ import Tts from './api/tts'
 import ValidaNumero from './api/validanumero'
 import Verificacao from './api/verificacao'
 
+export interface Response<T = any> {
+  status: number
+  sucesso: boolean
+  motivo: number
+  mensagem: string
+  dados: T
+}
+
+export interface RelatorioResponse<T = any> extends Response<T> {
+  dados: {
+    relatorio: T[]
+  }
+}
+
 export = Totalvoice
 /**
  * Módulo TotalVoice

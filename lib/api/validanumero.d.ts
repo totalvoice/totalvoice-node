@@ -1,4 +1,14 @@
 import { AxiosInstance } from 'axios'
+import { RelatorioResponse, Response } from '../totalvoice'
+
+interface ValidaNumeroObject {
+  id: number
+  numero_destino: string
+  data_criacao: string
+  preco: number
+  valido: boolean
+  finalizado: boolean
+}
 
 export = ValidaNumero
 /**
@@ -22,21 +32,24 @@ declare class ValidaNumero {
    */
   enviar: (
     numero_destino: string,
-    gravar_audio: boolean,
-    bina: string,
-    max_tentativas: number
-  ) => Promise<any>
+    gravar_audio?: boolean,
+    bina?: string,
+    max_tentativas?: number
+  ) => Promise<Response<{ id: string }>>
   /**
    * Busca uma validação pelo ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: string) => Promise<any>
+  buscar: (id: string) => Promise<Response<ValidaNumeroObject>>
   /**
    * Relatório de validações de numeros
    * @param {string} data_inicio
    * @param {string} data_fim
    * @return {Promise}
    */
-  relatorio: (data_inicio: string, data_fim: string) => Promise<any>
+  relatorio: (
+    data_inicio: string,
+    data_fim: string
+  ) => Promise<RelatorioResponse<ValidaNumeroObject>>
 }

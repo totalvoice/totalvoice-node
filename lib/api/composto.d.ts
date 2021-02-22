@@ -1,4 +1,26 @@
 import { AxiosInstance } from 'axios'
+import { Response } from '../totalvoice'
+
+interface CompostoObject {
+  id: number
+  numero_destino: string
+  data_criacao: string
+  data_inicio: string
+  tipo: string
+  status: string
+  duracao_segundos: number
+  duracao: number
+  duracao_cobrada_segundos: number
+  duracao_cobrada: number
+  duracao_falada_segundos: number
+  duracao_falada: number
+  preco: number
+  resposta_usuario: boolean
+  resposta: string
+  url_gravacao: string
+  tags: string
+  motivo_desconexao: string
+}
 
 export = Composto
 /**
@@ -27,18 +49,18 @@ declare class Composto {
     bina: string,
     tags: string,
     gravar_audio: boolean
-  ) => Promise<any>
+  ) => Promise<Response<CompostoObject>>
   /**
    * Busca um composto pelo seu ID
    * @param {int} id
    * @return {Promise}
    */
-  buscar: (id: string) => Promise<any>
+  buscar: (id: string) => Promise<Response<CompostoObject>>
   /**
    * Relatório de mensagens de Composto
    * @param {string} data_inicio
    * @param {string} data_fim
    * @return {Promise}
    */
-  relatorio: (data_inicio: string, data_fim: string) => Promise<any>
+  relatorio: (data_inicio: string, data_fim: string) => Promise<RelatorioResponse<CompostoObject>>
 }
