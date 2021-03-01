@@ -30,25 +30,12 @@ export interface RelatorioResponse<T = any> extends Response<T> {
 }
 
 export = Totalvoice
-/**
- * Módulo TotalVoice
- * @param {string} accessToken
- * @param {string} baseUrl
- * @param {object} options
- */
-
 declare function Totalvoice(
   accessToken: string,
   baseUrl?: string,
   options?: AxiosRequestConfig
 ): void
 declare class Totalvoice {
-  /**
-   * Módulo TotalVoice
-   * @param {string} accessToken
-   * @param {string} baseUrl
-   * @param {object} options
-   */
   constructor(accessToken: string, baseUrl?: string, options?: AxiosRequestConfig)
   httpClient: AxiosInstance
   get chamada(): Chamada

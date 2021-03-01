@@ -2,16 +2,9 @@ import { AxiosInstance } from 'axios'
 import { Response } from '../totalvoice'
 
 export = Verificacao
-/**
- * Módulo Verificacao
- * @param {object} httpClient
- */
+
 declare function Verificacao(httpClient: AxiosInstance): void
 declare class Verificacao {
-  /**
-   * Módulo Verificacao
-   * @param {object} httpClient
-   */
   constructor(httpClient: AxiosInstance)
   enviar: (
     numero_destino: string,

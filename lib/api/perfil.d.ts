@@ -23,60 +23,15 @@ interface RecargaObject {
 }
 
 export = Perfil
-/**
- * Módulo Perfil
- * @param {object} httpClient
- */
 declare function Perfil(httpClient: AxiosInstance): void
 declare class Perfil {
-  /**
-   * Módulo Perfil
-   * @param {object} httpClient
-   */
   constructor(httpClient: AxiosInstance)
-  /**
-   * Consulta saldo atual
-   * @return {Promise}
-   */
   consultaSaldo: () => Promise<Response<{ saldo: number }>>
-  /**
-   * Consulta os dados da minha Conta
-   * @return {Promise}
-   */
   minhaConta: () => Promise<Response<ContaObject>>
-  /**
-   * Atualiza os dados da minha conta
-   * @param {object} $data
-   * @return {Promise}
-   */
   atualizaDadosConta: (data: AtualizarConta) => Promise<any>
-  /**
-   * Gera um relatório com as recargas efetuadas
-   * @return {Promise}
-   */
   relatorioRecarga: () => Promise<RelatorioResponse<RecargaObject>>
-  /**
-   * Gera uma URL para recarga de créditos
-   * @param {string} url_retorno
-   * @return {Promise}
-   */
   urlRecarga: (url_retorno: string) => Promise<Response<{ url: string }>>
-  /**
-   * Retorna a lista de webhooks configurados para esta conta
-   * @return {Promise}
-   */
   webhooks: () => Promise<Response<{ webhooks: WebhookObject[] }>>
-  /**
-   * Apaga um webhook
-   * @param {string} nome
-   * @return {Promise}
-   */
   excluirWebhook: (nome: string) => Promise<Response<null>>
-  /**
-   * Cadastra ou atualiza um webhook
-   * @param {string} nome
-   * @param {string} url
-   * @return {Promise}
-   */
   salvaWebhook: (nome: string, url: string) => Promise<Response<null>>
 }

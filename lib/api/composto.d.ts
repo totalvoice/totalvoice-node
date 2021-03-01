@@ -23,26 +23,9 @@ interface CompostoObject {
 }
 
 export = Composto
-/**
- * Módulo Composto
- * @param {object} httpClient
- */
 declare function Composto(httpClient: AxiosInstance): void
 declare class Composto {
-  /**
-   * Módulo Composto
-   * @param {object} httpClient
-   */
   constructor(httpClient: AxiosInstance)
-  /**
-   * Envia um composto para um número destino
-   * @param {string} numero_destino
-   * @param {array} dados
-   * @param {string} bina
-   * @param {string} tags
-   * @param {boolean} gravar_audio
-   * @return {Promise}
-   */
   enviar: (
     numero_destino: string,
     dados: any[],
@@ -50,17 +33,6 @@ declare class Composto {
     tags: string,
     gravar_audio: boolean
   ) => Promise<Response<CompostoObject>>
-  /**
-   * Busca um composto pelo seu ID
-   * @param {int} id
-   * @return {Promise}
-   */
   buscar: (id: string) => Promise<Response<CompostoObject>>
-  /**
-   * Relatório de mensagens de Composto
-   * @param {string} data_inicio
-   * @param {string} data_fim
-   * @return {Promise}
-   */
   relatorio: (data_inicio: string, data_fim: string) => Promise<RelatorioResponse<CompostoObject>>
 }
