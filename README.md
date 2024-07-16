@@ -55,7 +55,7 @@ A seguir exemplos de como pode ser utilizada esta biblioteca.
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-client.chamada.ligar("+5510999999999", "+5510999999999")
+client.chamada.ligar("+5510999999999", "+5510888888888")
     .then(function (data) {
         console.log(data)
     })
