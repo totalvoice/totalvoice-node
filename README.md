@@ -55,7 +55,7 @@ A seguir exemplos de como pode ser utilizada esta biblioteca.
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-client.chamada.ligar("4832830151", "4811111111")
+client.chamada.ligar("+5510999999999", "+5510888888888")
     .then(function (data) {
         console.log(data)
     })
@@ -107,7 +107,10 @@ client.chamada.encerrar(123) // ID da chamada
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-client.sms.enviar("4811111111", "Mensagem SMS")
+var resposta_usuario = false;
+var multi_sms = false;
+var data_criacao = '';
+client.sms.enviar("+5510999999999", "Mensagem SMS", resposta_usuario, multi_sms, data_criacao)
     .then(function (data) {
         console.log(data)
     })
@@ -124,8 +127,8 @@ client.sms.enviar("4811111111", "Mensagem SMS")
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-var opcoes = {velocidade: 2, tipo_voz: "br-Vitoria"};
-client.tts.enviar("4811111111", "Mensagem TTS", opcoes);
+var opcoes = {velocidade: 2, tipo_voz: "br-Vitoria", bina: "bina_cadastrada"};
+client.tts.enviar("+5510999999999", "Mensagem TTS", opcoes);
     .then(function(data) {
         console.log(data);
     })
@@ -142,7 +145,7 @@ client.tts.enviar("4811111111", "Mensagem TTS", opcoes);
 const totalvoice = require('totalvoice-node');
 const client = new totalvoice("access-token");
 
-client.audio.enviar("4811111111", "https://foo.bar/audio.mp3")
+client.audio.enviar("+5510999999999", "https://foo.bar/audio.mp3")
     .then(function(data) {
         console.log(data);
     })
